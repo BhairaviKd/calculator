@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calc',
@@ -9,6 +10,8 @@ export class CalcComponent implements OnInit {
   title = "mycalculator";
   toshow='0'
   currentVal=""
+  homeUrl="/"
+
   writetoinput(value:string){
     if(this.currentVal=='0'){
       this.currentVal=value
@@ -36,7 +39,15 @@ export class CalcComponent implements OnInit {
     this.toshow = this.currentVal
   }
 
-  constructor() { }
+  constructor(private router: Router){
+}
+
+
+  backtohome($event: string=""){
+    this.router.navigate([this.homeUrl]);
+  }
+
+  // constructor() { }
 
   ngOnInit(): void {
   }

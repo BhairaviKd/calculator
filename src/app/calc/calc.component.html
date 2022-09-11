@@ -1,4 +1,4 @@
-<div class="mycalc">
+<div class="mycalc" style="margin: 30px 30px 30px 30px;">
     <input [(ngModel)]="toshow" type="text">
     <div class="all-btn">
         <div class="all-btn-numbers">
@@ -28,4 +28,8 @@
         <button id="clear" (click)="clear()">C</button>
         <button id="equals" (click)="equals()">=</button>
     </div>
+</div>
+
+<div class="back-btn">
+    <button (click)="backtohome()">back</button>
 </div>

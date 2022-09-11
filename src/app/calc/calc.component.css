@@ -95,3 +95,9 @@ input :focus{
     outline: none;
     border: 1px solid black;
 }
+
+.back-btn{
+    display: flex;
+    margin: 20px 20px 20px 20px;
+    
+}
